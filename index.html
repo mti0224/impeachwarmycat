@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>請願提案｜線上連署</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__mark">提</div>
+        <div class="brand__text">
+          <div class="brand__title">線上請願提案系統</div>
+          <div class="brand__sub">Public Petition & Proposal Portal</div>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="meta__item">
+          <div class="meta__k">提案編號</div>
+          <div class="meta__v" id="proposalId">—</div>
+        </div>
+        <div class="meta__item">
+          <div class="meta__k">狀態</div>
+          <div class="meta__v badge" id="statusBadge">審查中</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="hero card">
+      <div class="hero__left">
+        <h1 id="title">請願提案：＿＿＿＿＿＿＿＿＿＿＿＿</h1>
+        <p class="lead" id="subtitle">為促進公共利益與制度完善，特提出本提案，請相關單位審議並回應。</p>
+
+        <div class="info-grid">
+          <div class="info">
+            <div class="info__k">提案機關/對象</div>
+            <div class="info__v" id="targetOrg">＿＿＿＿＿＿＿＿</div>
+          </div>
+          <div class="info">
+            <div class="info__k">提案人</div>
+            <div class="info__v" id="proposer">＿＿＿＿＿＿＿＿</div>
+          </div>
+          <div class="info">
+            <div class="info__k">發起日期</div>
+            <div class="info__v" id="createdAt">＿＿＿＿＿＿＿＿</div>
+          </div>
+          <div class="info">
+            <div class="info__k">截止日期</div>
+            <div class="info__v" id="deadline">＿＿＿＿＿＿＿＿</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero__right">
+        <div class="count card card--soft">
+          <div class="count__k">目前連署數</div>
+          <div class="count__v" id="count">—</div>
+          <div class="progress">
+            <div class="progress__bar" id="progressBar" style="width:0%"></div>
+          </div>
+          <div class="count__foot">
+            目標：<span id="goal">10,000</span> 份
+          </div>
+
+          <button class="btn btn--primary" id="signBtn">連署</button>
+          <button class="btn btn--ghost" id="refreshBtn">更新最新數據</button>
+
+          <div class="fineprint" id="hint">
+            點擊「連署」表示您支持本提案送交審議。
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>一、提案主文</h2>
+        <div class="rich" id="body">
+          <p>（請在此填寫提案主文：清楚描述您希望被採納的政策/規範/措施。）</p>
+          <ol>
+            <li>提出具體修正/新增之條文或措施。</li>
+            <li>明確列出執行單位與責任分工。</li>
+            <li>設定可衡量之里程碑與時程。</li>
+          </ol>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>二、理由與依據</h2>
+        <div class="rich" id="reasons">
+          <p>（請在此填寫：現況問題、影響範圍、法規或事證依據、比較案例等。）</p>
+          <ul>
+            <li>現況：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</li>
+            <li>問題：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</li>
+            <li>建議：＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>三、預期效益</h2>
+        <div class="rich" id="benefits">
+          <ul>
+            <li>提升制度透明度與可問責性</li>
+            <li>改善民眾權益與公共服務品質</li>
+            <li>降低治理風險與爭議成本</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>四、聯署方式</h2>
+        <div class="rich">
+          <p>本系統採線上連署統計。為維持統計品質，可能會對異常流量進行限制。</p>
+          <p class="muted">（若是正式用途，建議加入完整個資告知、隱私政策、驗證機制與防灌水措施。）</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Petition Portal</div>
+      <div class="muted">系統僅提供統計與公開資訊展示。</div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
